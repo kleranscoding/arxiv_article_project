@@ -1,1 +1,1 @@
-web: gunicorn ginger_test_project.wsgi --log-file -
+web: gunicorn arxiv_article_project.wsgi --log-file -
