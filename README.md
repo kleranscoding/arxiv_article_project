@@ -1,5 +1,7 @@
 # arVix Latest Article
 
+[open app](https://arxiv-article-project.herokuapp.com)
+
 ## Overview
 This web application retrieves articles and authors contribution information from arVix.org using the arXiv bulk data API (`https://arxiv.org/help/api/index`). Using Python/Django (server-side), users can click on the links and display dynamic views with the help of template static pages. Data processing details is abstracted from the back-end to the front-end users as this application requires heavy data manipulation. After getting the required data from the back-end, the users can see formatted data nice and clear. 
 
