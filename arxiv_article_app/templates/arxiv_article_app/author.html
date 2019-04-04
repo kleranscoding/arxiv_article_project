@@ -1,0 +1,25 @@
+{% extends 'arxiv_article_app/base.html' %}
+
+{% block author %}
+
+<h2>
+  {{ author }}
+</h2>
+
+<h3 class="latest-heading">
+  Latest Articles:
+</h3>
+
+{% for entry in entries %}
+  <div class="articles">
+    <h3>
+      <a href="/articles?article_id={{ entry.article_id }}">
+        {{ entry.title }}
+      </a>
+    </h3>
+    <p>submitted on {{ entry.published }}</p>
+  </div>
+  
+{% endfor %}
+
+{% endblock %}

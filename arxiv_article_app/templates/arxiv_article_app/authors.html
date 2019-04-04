@@ -1,0 +1,26 @@
+{% extends 'arxiv_article_app/base.html' %}
+
+{% block authors %}
+
+<h3 class="latest-heading">
+  List of selected authors and their latest contributions
+</h3>
+
+<section class="contrib">
+  {% for author in authors %}
+    <div class="author-contrib">
+      <span class="author-name">
+        <a href="/authors?author={{ author.0 }}">
+          {{ author.0 }}
+        </a>
+      </span>
+      <span class="contrib-num">
+        {{ author.1 }}
+      </span>
+    </div>
+    
+  {% endfor %}
+</section>
+
+
+{% endblock %}

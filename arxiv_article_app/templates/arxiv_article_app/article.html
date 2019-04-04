@@ -1,0 +1,25 @@
+{% extends 'arxiv_article_app/base.html' %}
+
+{% block article %}
+
+<div class="article-details">
+  <h2>{{ entry.title }}</h2>
+  <h4> Summary: </h4>
+  <p class="summary"> {{ entry.summary }} <p>
+  <hr/>
+  <p>
+    Author(s): 
+    {% for author in entry.authors %}
+      <span class="authors">
+        <a href="/authors?author={{ author }}">
+          {{author}}
+        </a>
+      </span>
+    {% endfor %}
+  </p>
+  <p>
+    Submission date: {{ entry.published }}
+  </p>
+</div>
+
+{% endblock %}
